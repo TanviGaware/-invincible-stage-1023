@@ -2,337 +2,471 @@
 <html lang="en">
 
 <head>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VERTEX</title>
-    
-       
- <style>
-    
-.navbar {
-    height: 90px;
-    width: 100%;
+    <style>
+        * {}
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           
+        }
+
+        .navbar {
+
+            height: 90px;
+            width: 100%;
+            position: sticky;
+            top: 0px;
+            background-color: white;
+            display: flex;
+
+        }
+
+        .left {
+            list-style-type: none;
+            margin-left: 7%;
+            width: 30%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .middle {
+            margin-left: 5%;
+            width: 50%;
+
+            height: 100%;
+
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .right {
+            margin-right: 3%;
+            width: 30%;
+            height: 100%;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .sub-links {
+            font-size: 15px;
+            font-weight: bold;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+
+        #tools {
+            border: 0;
+
+        }
+
+        #login {
+            color: black;
+        }
+
+        .account {
+            width: 30%;
+            height: 50%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #00A5C9;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            padding: 2px 2px 2px 2px;
+            margin-right: 10px;
+            margin-left: 0;
+
+        }
+
+        .account1 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 30%;
+            height: 50%;
+
+            background-color: #FFA800;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 5%;
+            border-radius: 4px;
+            padding: 2px 2px 2px 2px;
+        }
+
+        .part1 {
+            border: 0;
+            width: 100%;
+            height: 700px;
+
+            font-size: 15px;
+            justify-content: center;
+            align-items: center;
+            border: 0;
+        }
+
+        .para {
+            text-align: center;
+            font-size: 100px;
+            justify-content: center;
+            align-items: center;
+            font-weight: 500;
+            line-height: 130px;
 
 
-    display: flex;
- 
+        }
+
+        .para1 {
+            text-align: center;
+            font-size: 30px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            color: gray;
+            padding-top: 0px;
+
+        }
+
+        .part2 {
+            margin-top: 30px;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .p21 {
+            font-size: 20px;
+            display: flex;
+            margin-right: 20px;
+        }
+
+        .p22 {
+            font-size: 20px;
+            display: flex;
+            margin-right: 20px;
+        }
+
+        .part3 {
+
+
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .part4 {
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 100px;
+            margin-left: 100px;
+
+        }
+
+        .nav {
+            box-shadow: rgba(101, 41, 1, 0.25) 0px 14px 28px, rgba(233, 98, 20, 0.22) 0px 10px 10px;
+
+            height: 76px;
+            width: 40%;
+            border: 1px solid #FFA800;
+            border-radius: 40px;
+            display: flex;
+            margin-left: 30%;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+
+        }
+        .emails {
+
+            height: 60px;
+            width: 70%;
+            border-radius: 40px;
+            border: 1px solid white;
+
+            background-color: white;
+
+
+            font-size: 15px;
+
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .start {
+            background-color: #FFA800;
+            color: white;
+            font-size: 15px;
+            padding: 15px 24px 15px 24px;
+            border-radius: 30px;
+            border: 0;
+            width: 20%;
+            height: 54px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin-left: 4%;
+        }
+
+        .start1 {
+            background-color: #00A5C9;
+            color: white;
+            font-size: 15px;
+            padding: 15px 24px 15px 24px;
+            border-radius: 30px;
+            border: 0;
+            width: 25%;
+            height: 70%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin-right: 10px;
+            margin-top: 10px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        .main {
+            margin-top: 250px;
+            margin-left: 300px;
+
+            width: 70%;
+            height: 700px;
+        }
+
+        .box {
+            width: 100%;
+            height: 350px;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .b11 {
+            height: 50%;
+            width: 100%;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .b11-1 {
+            height: 50%;
+            width: 100%;
+
+            display: flex;
+        }
+
+        .a {
+            width: 60%;
+        }
+
+        .b {
+            width: 40%;
+        }
+
+        .b11-2 {
+            height: 50%;
+            width: 100%;
+
+
+        }
+
+
+
+
+
+        .b11-p {
+            height: 50%;
+            width: 100%;
+
+            display: flex;
+        }
+
+        .boxtop {
+            text-align: center;
+            margin-top: 500px;
+        }
+
+        .d {
+            margin-left: 10px;
+            margin-right: 30px;
+        }
+
+        .pans{
+            width: 70%;
+         margin-left: 220px;
+            align-items: center;
+        }
+        .ans{
+            
+
+            margin-top: 60px;
+            justify-content: space-evenly;
+            align-items: center;
+            display: flex;
+            
+        }
+.ans img { 
+   width: 100px;
+   height: 100px;
+
+   padding: 20px 20px 0px 40px;
+
 }
-
-.left {
-    list-style-type: none;
-    margin-left: 7%;
-    width: 20%;
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.middle {
-    margin-left: 15%;
-    width: 60%;
-
-    height: 100%;
-
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.right {
-    width: 20%;
-    height: 100%;
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-}
-
-.sub-links {
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.account {
-    width: 50%;
-    height: 60%;
-
-    background-color: #00A5C9;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    color: white;
-    font-size: 12px;
-    border-radius: 2px;
-    padding: 2px 2px 2px 20px;
-}
-
-.account1 {
-    width: 50%;
-    height: 60%;
+.shadow{
     margin-left: 20px;
-    background-color: #FFA800;
-    display: flex;
+margin-right: 20px;
     text-align: center;
-    justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-
-    border-radius: 2px;
-    padding: 2px 2px 2px 20px;
-}
-
-
-
-.nav {
-    height: 90px;
-    width: 35%;
-    border: 1px solid #FFA800;
-    border-radius: 40px;
-    display: flex;
-    margin-left: 30%;
-    justify-content: center;
-    align-items: center;
-}
-
-.emails{
-   
- 
-    width: 75%;
-   
-border: 0;
-    height: 60%;
-    display: flex;
-    margin-left: 20px;
-    font-size: 15px;
-    border-radius: 40px;
-    justify-content: center;
-    align-items: center;
-   
-}
-
-.start {
-    background-color: #FFA800;
-    color: white;
-    font-size: 15px;
-    padding: 15px 24px 15px 24px;
-    border-radius: 30px;
-    border: 0;
-    width: 25%;
-    height: 70%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-right: 10px;
-    margin-top: 10px;
-}
-.start1 {
-    background-color:  #00A5C9;
-    color: white;
-    font-size: 15px;
-    padding: 15px 24px 15px 24px;
-    border-radius: 30px;
-    border: 0;
-    width: 25%;
-    height: 70%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-right: 10px;
-    margin-top: 10px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-.part1 {
-    border: 0;
-    width: 100%;
-    height: 700px;
-    margin-left: 20px;
-    font-size: 15px;
-    justify-content: center;
-    align-items: center;
-    border: 0;
-}
-
-.para {
-    text-align: center;
-    font-size: 100px;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.para1 {
-    text-align: center;
-    font-size: 20px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    color: gray;
-
-}
-
-.part2 {
-    margin-left: 20px;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.p21 {
-    display: flex;
-}
-
-.p22 {
-    display: flex;
-}
-
-.part3 {
-
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.part4 {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.part5 {
-    text-align: center;
-    font-size: 50px;
-    justify-content: center;
-    align-items: center;
-}
-
-.part6 {
-    text-align: center;
-    font-size: 20px;
-    justify-content: center;
-    align-items: center;
-    color: gray;
-}
-
-.box {
-    width: 100%;
-    height: 350px;
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-}
-
-.b1 {
-    height: 50%;
-    width: 100%;
-
-    justify-content: center;
-    align-items: center;
-}
-
-.b2 {
-    height: 50%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.b11-1 {
-    height: 50%;
-    width: 100%;
-
-    display: flex;
-}
-
-.b11-p {
-    height: 50%;
-    width: 100%;
-
-    display: flex;
-}
-
-.a {
-    width: 60%;
-}
-
-.b {
-    width: 40%;
-}
-
-.d {
-    margin-left: 10px;
-    margin-right: 30px;
-}
-
-.box3 {
-    height: 370px;
-    width: 100%;
-    margin-top: 70px;
-    background-color:#96ECFF;
-    justify-content: center;
-    align-items: center;
- text-align: center;
- box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-}
- .blue{
-
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-.img{
-    margin-left: 15px;
-    margin-right: 15px;
-}
-.img1{
-    margin-left: 50px;
-    margin-right: 15px;
-}
-.img10{
-    margin-left: 15px;
-    margin-right: 50px;
-}
-.heading{
-    padding-top: 75px;
-}
-.box4{
-    display: flex;
+    width: 200px;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        
 }
 .doit{
-    display: flex;
+    width: 75%;
+    height: 150px;
+    margin-left:200px ;
+    text-align: center;
+    
+}
+.y{
+    font-size: 18px;
+}
+.x{
+    font-size: 40px;
+    font-weight: bold;
+}
+.part10{
+    text-align: center;
+            
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+       
 
 }
-.z{
-margin-top: 100px;
-}
+.part11{
+    text-align: center;
+            font-size: 30px;
+            justify-content: center;
+            align-items: center;
+            font-weight: 500;
+            line-height: 130px;
+            margin-top: 30px;
 
- </style>
+}
+        .part12{
+            margin-top: -45px;
+            text-align: center;
+            font-size: 30px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            color: rgb(47, 166, 209);
+            padding-top: 0px;
+
+        }
+        .part13{
+            box-shadow: rgba(101, 41, 1, 0.25) 0px 14px 28px, rgba(233, 98, 20, 0.22) 0px 10px 10px;
+
+height: 76px;
+width: 40%;
+border: 1px solid #FFA800;
+border-radius: 40px;
+display: flex;
+margin-left: 30%;
+justify-content: center;
+align-items: center;
+background-color: white;
+
+        }
+        .part14{
+            margin-top: 30px;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .part15 {
+            font-size: 20px;
+            display: flex;
+            margin-right: 20px;
+        }
+
+        .part16 {
+            font-size: 20px;
+            display: flex;
+            margin-right: 20px;
+        }
+        .scroll{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    </style>
 </head>
 
 <body>
-  
+
     <div class="navbar">
-        <div class="left"> <a href="https://cdn5.engagebay.com/new/assets/img/p-logos/business.png"><img src="C:\Users\tanvi\Downloads\logo2.svg"></a>  </div>
+        <div class="left"> <a href="https://cdn5.engagebay.com/new/assets/img/p-logos/business.png"><img
+                    src="C:\Users\tanvi\Downloads\logo2.svg"></a> </div>
+
         <div class="middle">
-            <p class="sub-links">Products</p>
+            <select name="SORT" class="sub-links" id="tools">
+                <option value="Products">Products</option>
+
+            </select>
+
+
             <p class="sub-links">Pricing</p>
-            <p class="sub-links">Resources</p>
-            <p class="sub-links">Free Tools </p>
+            <select name="Resources" class="sub-links" id="tools">
+                <option value="Resources">Resources</option>
+
+            </select>
+
+
+            <select name="FreeTools" class="sub-links" id="tools">
+                <option value="Free Tools"> Free Tools</option>
+
+                <option value="Free Tools">UTM Builder</option>
+                <option value="Free Tools">Email Signature</option>
+                <option value="Free Tools">Email Tracker</option>
+                <option value="Free Tools">Email Validators</option>
+
+            </select>
+
+
             <p class="sub-links">Blog</p>
-            <a href="https://app.engagebay.com/login" ><p class="sub-links">Login</p></a>
-            
+            <a href="https://app.engagebay.com/login">
+                <p id="login" class="sub-links">Login</p>
+            </a>
         </div>
 
         <div class="right">
@@ -340,13 +474,13 @@ margin-top: 100px;
             <div class="account1">Free Signup</div>
         </div>
     </div>
-
     <div class="part1">
 
 
         <p class="para">
             Market better. Sell faster.
-            <br /> Support smarter.
+            <br />
+            Support smarter.
         </p>
         <p class="para1">One platform for all your Marketing, Sales, and Support teams</p>
         <div class="nav">
@@ -359,132 +493,38 @@ margin-top: 100px;
             <p class="p21"><img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt="">
                 Free for 15 users
             </p>
-            <p class="p22"> <img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt=""> No credit
+            <p class="p22"> <img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt=""> No
+                credit
                 card required</p>
         </div>
-        <img class="part3" data-src="https://cdn5.engagebay.com/new/assets/img/banner-image.svg" alt="Banner Hero Image"
-            width="1296" height="382" loading="lazy" src="https://cdn5.engagebay.com/new/assets/img/banner-image.svg"
-            data-loaded="true">
+     <img class="part3" data-src="https://cdn5.engagebay.com/new/assets/img/banner-image.svg" alt="Banner Hero Image"
+        width="1296" height="382" loading="lazy" src="https://cdn5.engagebay.com/new/assets/img/banner-image.svg"
+        data-loaded="true">
+
+<marquee behavior="" direction="right"> <div class="part4">
+    <img width="151" height="47" src="https://cdn5.engagebay.com/new/assets/img/p-logos/neilpatel.png" alt="1">
+    <img width="151" height="47" src="https://cdn5.engagebay.com/new/assets/img/p-logos/forbs.png" alt="2">
+    <img width="151" height="47" src="https://cdn5.engagebay.com/new/assets/img/p-logos/inc.png" alt="3">
+    <img width="151" height="47" src="https://cdn5.engagebay.com/new/assets/img/p-logos/enterpreneur.png"
+        alt="4">
+    <img width="151" height="47" src="https://cdn5.engagebay.com/new/assets/img/p-logos/techcrunch.png" alt="5">
+    <img width="151" height="47" src="https://cdn5.engagebay.com/new/assets/img/p-logos/jeffbullas.png" alt="6">
+    <img width="151" height="47" src="https://cdn5.engagebay.com/new/assets/img/p-logos/business.png" alt="7">
+</div></marquee>
+       
+
+    </div>
+
+    <div class="boxtop">
 
 
-        <div class="part4">
-            <img width="151" height="47" src="https://cdn5.engagebay.com/new/assets/img/p-logos/neilpatel.png" alt="1">
-            <img width="151" height="47" src="https://cdn5.engagebay.com/new/assets/img/p-logos/forbs.png" alt="2">
-            <img width="151" height="47" src="https://cdn5.engagebay.com/new/assets/img/p-logos/inc.png" alt="3">
-            <img width="151" height="47" src="https://cdn5.engagebay.com/new/assets/img/p-logos/enterpreneur.png"
-                alt="4">
-            <img width="151" height="47" src="https://cdn5.engagebay.com/new/assets/img/p-logos/techcrunch.png" alt="5">
-            <img width="151" height="47" src="https://cdn5.engagebay.com/new/assets/img/p-logos/jeffbullas.png" alt="6">
-            <img width="151" height="47" src="https://cdn5.engagebay.com/new/assets/img/p-logos/business.png" alt="7">
-        </div>
-        <hr size="1" width="90%" color="black">
-        <p class="part5"><b>Single Solution for All Your Activities</b></p>
+        <h2 class="part5"><b>Single Solution for All Your Activities</b></h2>
         <p class="part6">Identify new opportunities, convert visitors, deliver customer happiness, and more!</p>
-
-        <div class="box">
-            <div class="b1">
-                <div class="b11">
-                    <div class="b11-1">
-
-                        <div class="a"> 
-                               <h4>CRM Software</h4>
-                            <p>Store unlimited contacts and build stronger relationships by keeping track of all your
-                                customer details in one place</p>
-                        </div>
-                        <div class="b"> <img width="130" height="130"
-                                src="https://cdn5.engagebay.com/new/assets/img/icons/crm.svg" alt=""></div>
+    </div>
 
 
-                    </div>
+    <div class="main">
 
-                    <div class="b11-2">
-                        <p><b>POPULAR FEATURES</b></p>
-
-                        <div class="b11-p">
-                            <div class="d">
-                                <p><img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt="">
-                                    Free for 15 users
-                                </p>
-                            </div>
-                            <div class="d">
-                                <p> <img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt=""> No
-                                    credit card required</p>
-                            </div>
-                        </div>
-
-                        <div class="b11-p">
-                            <div class="d">
-                                <p><img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt="">
-                                    Free for 15 users
-                                </p>
-                            </div>
-                            <div class="d">
-                                <p> <img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt=""> No
-                                    credit card required</p>
-                            </div>
-                        </div>
-
-
-                        <a href="https://app.engagebay.com/signup" > <button class="start1" type="submit"> Get Started</button></a> </button>
-
-
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="b2">
-                <div class="b11">
-                    <div class="b11-1">
-
-                        <div class="a"> <b>
-                                <p>CRM Software
-                            </b></p>
-                            <p>Store unlimited contacts and build stronger relationships by keeping track of all your
-                                customer details in one place</p>
-                        </div>
-                        <div class="b"> <img width="130" height="130"
-                                src="https://cdn5.engagebay.com/new/assets/img/icons/crm.svg" alt=""></div>
-
-
-                    </div>
-
-                    <div class="b11-2">
-                        <p><b>POPULAR FEATURES</b></p>
-
-                        <div class="b11-p">
-                            <div class="d">
-                                <p><img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt="">
-                                    Free for 15 usersss
-                                </p>
-                            </div>
-                            <div class="d">
-                                <p> <img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt=""> No
-                                    credit card required</p>
-                            </div>
-                        </div>
-
-                        <div class="b11-p">
-                            <div class="d">
-                                <p><img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt="">
-                                    Free for 15 users
-                                </p>
-                            </div>
-                            <div class="d">
-                                <p> <img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt=""> No
-                                    credit card required</p>
-                            </div>
-                        </div>
-
-
-                        <button class="start1" type="submit"> Get Started </button>
-
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
         <div class="box">
@@ -492,18 +532,14 @@ margin-top: 100px;
                 <div class="b11">
                     <div class="b11-1">
 
-                        <div class="a"> <b>
-                                <p>CRM Software
-                            </b></p>
+                        <div class="a">
+                            <h4>CRM Software</h4>
                             <p>Store unlimited contacts and build stronger relationships by keeping track of all your
                                 customer details in one place</p>
                         </div>
                         <div class="b"> <img width="130" height="130"
                                 src="https://cdn5.engagebay.com/new/assets/img/icons/crm.svg" alt=""></div>
-
-
                     </div>
-
                     <div class="b11-2">
                         <p><b>POPULAR FEATURES</b></p>
 
@@ -532,30 +568,22 @@ margin-top: 100px;
                         </div>
 
 
-                        <button class="start1" type="submit"> Get Started </button>
-
-
+                        <a href="https://app.engagebay.com/signup"> <button class="start1" type="submit"> Get
+                                Started</button></a> </button>
 
                     </div>
                 </div>
-            </div>
-
-            <div class="b2">
                 <div class="b11">
                     <div class="b11-1">
 
-                        <div class="a"> <b>
-                                <p>CRM Software
-                            </b></p>
+                        <div class="a">
+                            <h4>CRM Software</h4>
                             <p>Store unlimited contacts and build stronger relationships by keeping track of all your
                                 customer details in one place</p>
                         </div>
                         <div class="b"> <img width="130" height="130"
                                 src="https://cdn5.engagebay.com/new/assets/img/icons/crm.svg" alt=""></div>
-
-
                     </div>
-
                     <div class="b11-2">
                         <p><b>POPULAR FEATURES</b></p>
 
@@ -584,196 +612,265 @@ margin-top: 100px;
                         </div>
 
 
-                        <button class="start1" type="submit"> Get Started </button>
-
-
+                        <a href="https://app.engagebay.com/signup"> <button class="start1" type="submit"> Get
+                                Started</button></a> </button>
 
                     </div>
                 </div>
+
+            </div>
+            <div class="b1">
+                <div class="b11">
+                    <div class="b11-1">
+
+                        <div class="a">
+                            <h4>CRM Software</h4>
+                            <p>Store unlimited contacts and build stronger relationships by keeping track of all your
+                                customer details in one place</p>
+                        </div>
+                        <div class="b"> <img width="130" height="130"
+                                src="https://cdn5.engagebay.com/new/assets/img/icons/crm.svg" alt=""></div>
+                    </div>
+                    <div class="b11-2">
+                        <p><b>POPULAR FEATURES</b></p>
+
+                        <div class="b11-p">
+                            <div class="d">
+                                <p><img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt="">
+                                    Free for 15 users
+                                </p>
+                            </div>
+                            <div class="d">
+                                <p> <img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt=""> No
+                                    credit card required</p>
+                            </div>
+                        </div>
+
+                        <div class="b11-p">
+                            <div class="d">
+                                <p><img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt="">
+                                    Free for 15 users
+                                </p>
+                            </div>
+                            <div class="d">
+                                <p> <img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt=""> No
+                                    credit card required</p>
+                            </div>
+                        </div>
+
+
+                        <a href="https://app.engagebay.com/signup"> <button class="start1" type="submit"> Get
+                                Started</button></a> </button>
+
+                    </div>
+                </div>
+                <div class="b11">
+                    <div class="b11-1">
+
+                        <div class="a">
+                            <h4>CRM Software</h4>
+                            <p>Store unlimited contacts and build stronger relationships by keeping track of all your
+                                customer details in one place</p>
+                        </div>
+                        <div class="b"> <img width="130" height="130"
+                                src="https://cdn5.engagebay.com/new/assets/img/icons/crm.svg" alt=""></div>
+                    </div>
+                    <div class="b11-2">
+                        <p><b>POPULAR FEATURES</b></p>
+
+                        <div class="b11-p">
+                            <div class="d">
+                                <p><img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt="">
+                                    Free for 15 users
+                                </p>
+                            </div>
+                            <div class="d">
+                                <p> <img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt=""> No
+                                    credit card required</p>
+                            </div>
+                        </div>
+
+                        <div class="b11-p">
+                            <div class="d">
+                                <p><img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt="">
+                                    Free for 15 users
+                                </p>
+                            </div>
+                            <div class="d">
+                                <p> <img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt=""> No
+                                    credit card required</p>
+                            </div>
+                        </div>
+
+
+                        <a href="https://app.engagebay.com/signup"> <button class="start1" type="submit"> Get
+                                Started</button></a> </button>
+
+                    </div>
+                </div>
+
             </div>
         </div>
-<br/>
-<br/><br/><br/><br/>
-<div class="box3"> 
-    <div class="heading"> <p>HAPPY CUSTOMERS SHARE GREAT REVIEWS ON G2</p></div>
-        <div class="blue">
-            <img class="img1" height="150" width="100"
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/CRM_HighPerformer_AsiaPacific_HighPerformer.svg"
-                alt="">   
-                <img class="img" height="150" width="100"
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/CRM_HighPerformer_AsiaPacific_HighPerformer.svg"
-                alt="">   <img class="img" height="150" width="100"
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/CRM_HighPerformer_AsiaPacific_HighPerformer.svg"
-                alt="">   <img class="img" height="150" width="100"
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/CRM_HighPerformer_AsiaPacific_HighPerformer.svg"
-                alt="">   <img class="img" height="150" width="100"
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/CRM_HighPerformer_AsiaPacific_HighPerformer.svg"
-                alt="">   <img class="img" height="150" width="100"
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/CRM_HighPerformer_AsiaPacific_HighPerformer.svg"
-                alt="">   <img class="img" height="150" width="100"
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/CRM_HighPerformer_AsiaPacific_HighPerformer.svg"
-                alt="">   <img class="img" height="150" width="100"
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/CRM_HighPerformer_AsiaPacific_HighPerformer.svg"
-                alt="">   <img class="img" height="150" width="100"
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/CRM_HighPerformer_AsiaPacific_HighPerformer.svg"
-                alt="">   <img class="img10" height="150" width="100"
-                src="https://cdn5.engagebay.com/new/assets/img/Awards-2022/CRM_HighPerformer_AsiaPacific_HighPerformer.svg"
-                alt="">   
+    </div>
+
+
+
+
+<div class="doit">
+    <h1 class="x">Do It All With EngageBay</h1>
+    <p class="y"> Stop paying thousands of dollars to dozens of marketing, sales, and support software. Experience the world's most <br/>
+        affordable, unified software. EngageBay's all-in-one CRM software is the most comprehensive solution for your <br/>
+        business.</p>
+    </div>
+    <div  class="pans">
+    <div class="ans">
+
+<div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+    src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+
+    <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+        src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+        <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+            src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+            <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                    src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                    <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                        src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                                                            
+
+    </div>
+    <div class="ans">
+
+        <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+            src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+        
+            <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                    src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                    <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                        src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                        <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                            src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                            <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                                src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                                                                    
+        
+            </div><div class="ans">
+
+                <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                    src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                
+                    <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                        src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                        <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                            src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                            <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                                src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                                <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                                    src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                                    <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                                        src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                                                                            
+                
+                    </div><div class="ans">
+
+                        <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                            src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                        
+                            <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                                src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                                <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                                    src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                                    <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                                        src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                                        <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                                            src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                                            <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                                                src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                                                                                    
+                        
+                            </div><div class="ans">
+
+                                <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                                    src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                                
+                                    <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                                        src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                                        <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                                            src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                                            <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                                                src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                                                <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                                                    src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                                                    <div class="shadow"><a  href="https://www.engagebay.com/marketing/marketing-automation"><img
+                                                        src="https://cdn5.engagebay.com/new/assets/img/icons/eb-features/social-suite.svg" alt=""> </a><h4>dsfsagsdh</h4></div>
+                                                                                            
+                                
+                                    </div>
+    </div>
+
+    <div class="part10">
+
+
+        <p class="part11">
+            Simplify Marketing, Sales, & Support with the best free
+        </p>
+        <p class="part12"><b>
+            All-In-One CRM software</b></p>
+        <div class="part13">
+            <input type="email" name="email" class="emails" placeholder="Your email address " required="">
+            <button class="start" type="submit"> Get Started </button>
+        </div>
+
+
+        <div class="part14">
+            <p class="part15"><img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt="">
+                Free for 15 users
+            </p>
+            <p class="part16"> <img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt=""> No
+                credit
+                card required</p>
+        </div>
+       
+</div>
+
+<div class="doit">
+    <h1 class="x">Our Integration Partners</h1>
+    <p class="y"> Stay connected to your favorite apps using EngageBay’s integrations</p>
+    </div>
+
+<marquee scrollamount="15" direction=""  hspace="50px">
+
+    <div  class="scroll">
+
+    
+        
+    
+        <div>
+            <img src="https://cdn5.engagebay.com/new/assets/img/integrations/voxvalley.png" alt="">
+            <img src="https://cdn5.engagebay.com/new/assets/img/integrations/africaltalking.png" alt="">
+            <img src="https://cdn5.engagebay.com/new/assets/img/integrations/docusign.png" alt="">
+    
+        </div>
+    
+        <div>
+            <img src="https://cdn5.engagebay.com/new/assets/img/integrations/piesync.png" alt="">
+            <img src="https://cdn5.engagebay.com/new/assets/img/integrations/call-hippo.png" alt="">
+            <img src="https://cdn5.engagebay.com/new/assets/img/integrations/shopify.png" alt="">
+    
+        </div>
+        <div>
+            <img src="https://cdn5.engagebay.com/new/assets/img/integrations/zapier.png" alt="">
+            <img src="https://cdn5.engagebay.com/new/assets/img/integrations/justcall.png" alt="">
+            <img src="https://cdn5.engagebay.com/new/assets/img/integrations/stripe.png" alt="">
+    
         </div>
     </div>
 
-    <p class="part5"><b>Single Solution for All Your Activities</b></p>
-    <p class="part6">Identify new opportunities, convert visitors, deliver customer happiness, and more!</p>
-
-
-    <div class="middle">
-        <p class="sub-links">Products</p>
-        <p class="sub-links">Pricing</p>
-        <p class="sub-links">Resources</p>
-        <p class="sub-links">Free Tools </p>
-        <p class="sub-links">Blog</p>
-        <a href="https://app.engagebay.com/login" ><p class="sub-links">Login</p></a>
-        
-    </div>
-    <div></div>
-<div class="box4 ">
-
-<div class="b1">
-
-    <div class="a"> 
-        <h4>CRM Software</h4>
-     <p>Store unlimited contacts and build stronger relationships by keeping track of all your
-         customer details in one place</p>
- </div>
- <div class="b"> <img width="130" height="130"
-         src="https://cdn5.engagebay.com/new/assets/img/icons/crm.svg" alt=""></div>
-
-
-
- <p><b>POPULAR FEATURES</b></p>
-
- <div class="b11-p">
-     <div class="d">
-         <p><img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt="">
-             Free for 15 users
-         </p>
-     </div>
-     <div class="d">
-         <p> <img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt=""> No
-             credit card required</p>
-     </div>
- </div>
-
- <div class="b11-p">
-     <div class="d">
-         <p><img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt="">
-             Free for 15 users
-         </p>
-     </div>
-     <div class="d">
-         <p> <img width="20" height="20" src="file:///C:/Users/tanvi/Downloads/Ok.svg" alt=""> No
-             credit card required</p>
-     </div>
- </div>
-
-
- <a href="https://app.engagebay.com/signup" > <button class="start1" type="submit"> Get Started</button></a> </button>
-
-
-
-
-
-
-
- </div>
-<div><img width="400" height="350" src="https://cdn5.engagebay.com/new/assets/img/tabs/home/helpdesk_software.png" alt=""></div>
-</div>
-</div>
-</div>
-
-
-
-
-
- 
-        <h3>Do It All With EngageBay</h3>
-        <p>Stop paying thousands of dollars to dozens of marketing, sales, and support software. Experience the world's most affordable, unified software. EngageBay's all-in-one CRM software is the most comprehensive solution for your business.</p>
-    <div class="z">
-        <div class="doit">
-       
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        
-    
-    </div>
-    <div class="doit">
-       
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        
-    
-    </div><div class="doit">
-       
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        
-    
-    </div><div class="doit">
-       
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        
-    
-    </div><div class="doit">
-       
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        <a href="https://www.engagebay.com/marketing/marketing-automation"><img src=" https://cdn5.engagebay.com/new/assets/img/icons/eb-features/email-sequences.svg" alt=""></a>
-        
-    </div>
-  
-    </div>
-    
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
+</marquee>
 </body>
 
 </html>
