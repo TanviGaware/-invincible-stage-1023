@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <title>VERTEX LOGIN</title>
+    <style>
+   
+       *{
+       
+        text-align: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+      }
+    #main{
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+       padding: 40px 40px 40px 40px ;
+       
+        width: 450px;
+        height: 40%;
+        margin: auto;
+     
+    }
+    
+    #singup>input,#singup>button{
+      width: 300px;
+        height: 40px;
+        padding: 10px 10px 10px 10px;
+        border-radius: 40px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+       border: none;
+       outline: none;
+
+    }
+    #singup>button{
+      width: 300px;
+        height: 40px;
+        background-color: #00A5C9;
+
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #login>button{
+      margin-top: 10px;
+        margin-bottom: 10px;
+      width: 500px;
+        height: 60px;
+        background-color: #00A5C9;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #login>input{
+      padding-top: 20px;
+      padding-bottom:20px ;
+    }
+    #login{
+align-items: center;
+        width: 100%;
+        height: 100%;
+     display: none;
+    }
+    #login>input,#login>button{
+      margin-top: 10px;
+        margin-bottom: 10px;
+        border: none;
+       outline: none;
+       border-radius: 40px;
+        width: 300px;
+        height: 40px;
+       
+       box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+    #log{
+        width: 400px;
+        height: 50px;
+        border: none;
+        background-color: whitesmoke;
+        border-radius: 10px;
+       
+    }
+    #log{
+        width:40%;
+        height: 50px;
+        border: none;
+        background-color: #FFA800;
+        border-radius: 40px;
+        padding: 10px 10px 10px 10px;
+       margin-left: 20px;
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #sig{
+        width: 40%;
+        height: 50px;
+        border: none;
+        background-color: #FFA800;
+        border-radius: 40px;
+        padding: 10px 10px 10px 10px;
+       margin-left: 40px;
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .log{
+        text-align: center;
+     
+        padding-top:50px;
+    }
+    #lable{
+        width: 80%;
+    justify-content: center;
+    align-items: center;
+      display: flex;
+      
+    }
+    .a{
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+    </style>
+</head>
+<body>
+    <a href="./index.html"></a>
+  <div class="log">
+   
+  </div>
+  <div id="main">
+
+    <img style="margin-bottom: 15px;"
+                    src="./imgages/new.svg">
+                    <p>Don't have an account yet ?</p>
+    <div id="leble">
+   <button id="sig">Sign Up</button>
+ <button id="log">Log In</button>
+        
+    </div>
+    <div id="singup">
+        <input class="a"  type="text" placeholder="Your Name" id="name">
+        <input class="a" type="email" placeholder="Enter Your Email" id="email">
+        <input class="a" type="number" placeholder="Mobile Number" id="num">
+        <input class="a" type="password" placeholder="Enter New password" id="pass">
+        <button class="a" id="signup"><a href="file:///C:/Users/tanvi/Desktop/PROJECT/-invincible-stage-1023/login.html">     Sign Up</a>
+          
+     </button>
+    </div>
+    <div id="login">
+        <input class="a" type="text" placeholder="Email" id="eemail">
+        <input class="a" type="password" placeholder="password" id="epass">
+           <button id="loging"><a href="C:\Users\tanvi\Desktop\PROJECT\-invincible-stage-1023\index1.html">Log In </a></button>
+    </div>
+    2022 Vertex ,Inc.All rights reserved.
+    </div>
+   
+</body>
+</html>
+<script>
+    document.getElementById("log").addEventListener("click",()=>{
+        document.getElementById("singup").style.display="none";
+        document.getElementById("login").style.display="block";
+        
+    })
+    document.getElementById("sig").addEventListener("click",()=>{
+        document.getElementById("singup").style.display="block";
+        document.getElementById("login").style.display="none";
+        
+    })
+
+    document.getElementById("signup").addEventListener("click",()=>{
+      let user=JSON.parse(localStorage.getItem("user"))||[]
+      let isnew=true
+      let ename=document.getElementById("name").value
+      for(let i=0;i<user.length;i++){
+        if(user[i].name==ename){
+          isnew=false
+        }
+      }
+      if(isnew){
+        user.push({
+          name:ename,
+          email:document.getElementById("email").value,
+          number:document.getElementById("num").value,
+          pass:document.getElementById("pass").value
+        })
+        localStorage.setItem("user",JSON.stringify(user))
+        alert("sign up done you can log in now")
+      }else{
+        alert("alredy signuped")
+      }
+    })
+    document.getElementById("loging").addEventListener("click",()=>{
+      let user=JSON.parse(localStorage.getItem("user"))||[]
+      let eemail=document.getElementById("eemail").value
+      let epass=document.getElementById("epass").value
+      let isvalid=false
+      let id=0
+      for(let i=0;i<user.length;i++){
+        if(user[i].email==eemail){
+          if(user[i].pass==epass){
+            isvalid=true
+            id=i
+          }
+        }
+      }
+      if(isvalid){
+        alert("login succesfull")
+        localStorage.setItem("userlog",JSON.stringify(user[id]))
+      }else{
+        alert("wrong credentials")
+      }
+    })
+</script>
